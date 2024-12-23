@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="nav-link">
+                    <span class="animate_letters">[ky.org]</span>
+                </a>
+                <a href="{{ url_for('cv') }}" class="nav-link">
+                    <span class="animate_letters">[cv]</span>
+                </a>
+                <a href="{{ url_for('books') }}" class="nav-link">
+                    <span class="animate_letters">[books]</span>
+                </a>
+                <a href="{{ url_for('posts') }}" class="nav-link">
+                    <span class="animate_letters">[posts]</span>
+                </a>
+                <a href="{{ url_for('lists') }}" class="nav-link">
+                    <span class="animate_letters">[lists]</span>
+                </a>
+            </nav>
+            <div class="about">
+                <h1 class="about-name"><span class="animate_letters">Kamoliddin Yulbarsov</span></h1>
+                <a class="about-email" href="mailto:ky@ky.com"><span class="animate_letters">ky@ky.org</span></a>
+                <h3 class="about-location">
+                    <a href="https://marspedia.org/File:Schiaparelli_Hemisphere_-_PIA00004labeled.jpg" target="_blank">
+                        <span class="animate_letters">Uzbekistan</span>
+                    </a>
+                </h3>
+                <div class="about-content">
+                    <img class="about-image" src="{{ url_for('static', filename='images/ggg.jpg') }}" alt="GaNGstAA">
+                    <p>Welcome!</p>
+                    <p>I am Kamoliddin Yulbarsov, originally born and bred in Fergana, Uzbekistan.</p>
+                    <p>My interests encompass BCI, HCI, AI, Software Engineering, Assistive technology, and human cognition.</p>
+                    <p>I believe technology has the power to enable us to do, make, create things we previously were hindered from doing, making, creating, and I am inspired to leverage this power to making the world a better place.</p>
+                    <p>Warm regards!</p>
+                </div>
+            </div>
+            <nav class="socials">
+                <a href="" class="nav-link">
+                    <span class="animate_letters">[x]</span>
+                </a>
+                <a href="" class="nav-link">
+                    <span class="animate_letters">[telegram]</span>
+                </a>
+                <a href="" class="nav-link">
+                    <span class="animate_letters">[instagram]</span>
+                </a>
+                <a href="" class="nav-link">
+                    <span class="animate_letters">[github]</span>
+                </a>
+                <a href="" class="nav-link">
+                    <span class="animate_letters">[rss]</span>
+                </a>
+            </nav>
+            <p class="attribution">*design inspired by 
+                <a href="https://cguti.xyz/">
+                    <span class="animate_letters" style="text-decoration: underline;">carmen</span>
+                </a>
+            </p>
+        </div>
+    </main>
+{% endblock %}

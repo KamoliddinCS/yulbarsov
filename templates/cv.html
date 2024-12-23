@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block title %}CV{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="nav-link">
+                    <span class="animate_letters">[ky.org]</span>
+                </a>
+                <a href="{{ url_for('cv') }}" class="nav-link">
+                    <span class="animate_letters">[cv]</span>
+                </a>
+                <a href="{{ url_for('books') }}" class="nav-link">
+                    <span class="animate_letters">[books]</span>
+                </a>
+                <a href="{{ url_for('posts') }}" class="nav-link">
+                    <span class="animate_letters">[posts]</span>
+                </a>
+                <a href="{{ url_for('lists') }}" class="nav-link">
+                    <span class="animate_letters">[lists]</span>
+                </a>
+            </nav>
+            <div class="cv-about">
+                <div class="info">
+                    <h1 class="about-name"><span class="animate_letters">Kamoliddin Yulbarsov</span></h1>
+                    <div class="traits-location">
+                        <h3 class="traits"><span class="animate_letters">AI, SE, Assistive Tech</span></h3>
+                        <h3 class="about-location cv-location"><span class="animate_letters">Uzbekistan</span></h3>
+                    </div>
+                    <nav class="navbar cv-socials">
+                        <a href="" class="nav-link">
+                            <span class="animate_letters">[Email]</span>
+                        </a>
+                        <a href="" class="nav-link">
+                            <span class="animate_letters">[Telegram]</span>
+                        </a>
+                        <a href="" class="nav-link">
+                            <span class="animate_letters">[Github]</span>
+                        </a>
+                        <a href="" class="nav-link">
+                            <span class="animate_letters">[X]</span>
+                        </a>
+                    </nav>
+                </div>
+                <img class="cv-image" src="{{ url_for('static', filename='images/me1.jpg') }}" alt="Haeundae Beach">
+            </div>
+            <div class="cv-main">
+                <div class="cv-education">
+                    <h2 class="heading">Education</h2>
+                    <div class="school">
+                        <div class="institution">
+                            <h3 class="institution-name">Specialized School #2</h3>
+                            <div class="institution-duration">2013 - 2022</div>
+                        </div>
+                        <div class="level">Primary & Secondary schools, specialized in learning foreign languages</div>
+                        <div class="tags">
+                            <div class="tag">Physics</div>
+                            <div class="tag">Maths</div>
+                            <div class="tag">Chemistry</div>
+                            <div class="tag">Geography</div>
+                            <div class="tag">Biology</div>
+                            <div class="tag">English</div>
+                            <div class="tag">Uzbek</div>
+                            <div class="tag">Russian</div>
+                            <div class="tag">Literature</div>
+                            <div class="tag">History</div>
+                            <div class="tag">Foundations of Law</div>
+                        </div>
+                    </div>
+                    <div class="school">
+                        <div class="institution">
+                            <h3 class="institution-name">Vocational School #1</h3>
+                            <div class="institution-duration">2022 - 2023</div>
+                        </div>
+                        <div class="level">1st Year - 10th Grade</div>
+                        <div class="tags">
+                            <div class="tag">Curcuit Wiring</div>
+                            <div class="tag">Wielding</div>
+                            <div class="tag">Physics</div>
+                            <div class="tag">Maths</div>
+                            <div class="tag">Chemistry</div>
+                            <div class="tag">Geography</div>
+                            <div class="tag">Biology</div>
+                            <div class="tag">English</div>
+                            <div class="tag">Uzbek</div>
+                            <div class="tag">Russian</div>
+                            <div class="tag">Literature</div>
+                            <div class="tag">History</div>
+                            <div class="tag">Foundations of Law</div>
+                        </div>
+                    </div>
+                    <div class="school">
+                        <div class="institution">
+                            <h3 class="institution-name">Cambridge International College</h3>
+                            <div class="institution-duration">2023 - 2024</div>
+                        </div>
+                        <div class="level">Senior Year - 11th Grade</div>
+                        <div class="tags">
+                            <div class="tag">Physics</div>
+                            <div class="tag">Maths</div>
+                            <div class="tag">Chemistry</div>
+                            <div class="tag">Geography</div>
+                            <div class="tag">Biology</div>
+                            <div class="tag">English</div>
+                            <div class="tag">Uzbek</div>
+                            <div class="tag">Russian</div>
+                            <div class="tag">Literature</div>
+                            <div class="tag">History</div>
+                            <div class="tag">Foundations of Law</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cv-experience">
+                    <h2 class="heading">Experience</h2>
+                    <div class="experience">
+                        <div class="institution">
+                            <div class="name-location">
+                                <h3 class="institution-name">Freelance</h3>
+                                <div class="tag">Remote</div>
+                            </div>
+                            <div class="institution-duration">2022 - 2023</div>
+                        </div>
+                        <div class="level">Full-stack Web Developer</div>
+                        <div class="experience-description">Built 15+ custom websites for local businesses, achieved a 4.8-star rating, boosted online sales by 20% with new e-commerce features</div>
+                    </div>
+                    <div class="experience">
+                        <div class="institution">
+                            <div class="name-location">
+                                <h3 class="institution-name">Stoic Haven Uz</h3>
+                                <div class="tag">Remote</div>
+                            </div>
+                            <div class="institution-duration">2023 - Present</div>
+                        </div>
+                        <div class="level">Full-stack Web Developer, Founder</div>
+                        <div class="experience-description">
+                            Made a website to catalog Hellenic texts and literature in Uzbek; recruited, trained, and managed 5 volunteer translators; optimized SEO; the platform achieved 5,000+ visits within the first 2 weeks of operation. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

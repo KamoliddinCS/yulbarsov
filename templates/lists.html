@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Lists{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="nav-link">
+                    <span class="animate_letters">[ky.org]</span>
+                </a>
+                <a href="{{ url_for('cv') }}" class="nav-link">
+                    <span class="animate_letters">[cv]</span>
+                </a>
+                <a href="{{ url_for('books') }}" class="nav-link">
+                    <span class="animate_letters">[books]</span>
+                </a>
+                <a href="{{ url_for('posts') }}" class="nav-link">
+                    <span class="animate_letters">[posts]</span>
+                </a>
+                <a href="{{ url_for('lists') }}" class="nav-link">
+                    <span class="animate_letters">[lists]</span>
+                </a>
+            </nav>
+            <h1 class="lists-section-name"><span class="animate_letters">Lists</span></h1>
+            <!-- <ul class="posts">
+                <li class="post">
+                    <a href="" class="post-link">
+                        <h2 class="post-name"><span class="animate_letters">Flask vs Django</span></h2>
+                        <h3 class="post-date"><span class="animate_letters">December 4, 2024</span></h3>
+                    </a>
+                </li>
+                <li class="post">
+                    <a href="" class="post-link">
+                        <h2 class="post-name"><span class="animate_letters">Absurdism in Ancient Greece</span></h2>
+                        <h3 class="post-date"><span class="animate_letters">December 4, 2024</span></h3>
+                    </a>
+                </li>
+                <li class="post">
+                    <a href="" class="post-link">
+                        <h2 class="post-name"><span class="animate_letters">AI oversaturation(?)</span></h2>
+                        <h3 class="post-date"><span class="animate_letters">December 4, 2024</span></h3>
+                    </a>
+                </li>
+                <li class="post">
+                    <a href="" class="post-link">
+                        <h1 class="post-name"><span class="animate_letters">Greatest mystery of Life</span></h1>
+                        <h3 class="post-date"><span class="animate_letters">December 4, 2024</span></h3>
+                    </a>
+                </li>
+            </ul> -->
+        </div>
+    </main>
+{% endblock %}
