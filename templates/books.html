@@ -29,48 +29,15 @@
                 <option value="Title (A-Z)">Title (A-Z)</option>
             </select>
             <div class="books">
+                {% for book in books %}
                 <div class="book">
-                    <a href="" class="book-link">
-                        <img src="{{ url_for('static', filename='images/1984.jpg') }}" alt="1984" class="book-image">
-                        <h2 class="book-name book-desc">1984</h2>
-                        <h2 class="book-author book-desc">George Orwell</h2>
+                    <a href="{{ book['id'] }}" class="book-link">
+                        <img src="{{ url_for('static', filename='images/'+book['image']) }}" alt="1984" class="book-image">
+                        <h2 class="book-name book-desc">{{ book["name"] }}</h2>
+                        <h2 class="book-author book-desc">{{ book["author"] }}</h2>
                     </a>
                 </div>
-                <div class="book">
-                    <a href="" class="book-link">
-                        <img src="{{ url_for('static', filename='images/thecount.jpg') }}" alt="The Count of Monte Cristo" class="book-image">
-                        <h2 class="book-name book-desc">The Count of Monte Cristo</h2>
-                        <h2 class="book-author book-desc">Alexandre Dumas</h2>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="" class="book-link">
-                        <img src="{{ url_for('static', filename='images/meditations.jpg') }}" alt="Meditations" class="book-image">
-                        <h2 class="book-name book-desc">Meditations</h2>
-                        <h2 class="book-author book-desc">Marcus Aurelius</h2>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="" class="book-link">
-                        <img src="{{ url_for('static', filename='images/ontheshortness.jpg') }}" alt="On the Shortness of Life" class="book-image">
-                        <h2 class="book-name book-desc">On the Shortness of Life</h2>
-                        <h2 class="book-author book-desc">Anneus Lucius Seneca</h2>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="" class="book-link">
-                        <img src="{{ url_for('static', filename='images/sherlock.jpg') }}" alt="Sherlock Holmes" class="book-image">
-                        <h2 class="book-name book-desc">Sherlock Holmes: Series</h2>
-                        <h2 class="book-author book-desc">Sir Arthur Conan Doyle</h2>
-                    </a>
-                </div>
-                <div class="book">
-                    <a href="" class="book-link">
-                        <img src="{{ url_for('static', filename='images/thousand.jpg') }}" alt="Thousand Splendid Suns" class="book-image">
-                        <h2 class="book-name book-desc">Thousand Splendid Suns</h2>
-                        <h2 class="book-author book-desc">Khaled Hosseini</h2>
-                    </a>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </main>

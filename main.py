@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import requests
 
 
 app = Flask(__name__)
@@ -8,14 +9,9 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/posts/", methods=["GET"])
+@app.route("/posts")
 def posts():
-    if request.method == "GET":
-        return render_template("posts.html")
-
-@app.route("/posts/<post>", methods=["GET"])
-def post(post):
-    return render_template("perms-n-combs.html")
+    return render_template("posts.html")
 
 
 @app.route("/cv")
@@ -23,9 +19,17 @@ def cv():
     return render_template("cv.html")
 
 
-@app.route("/books")
+@app.route("/books/")
 def books():
-    return render_template("books.html")
+    books = requests.get("https://api.npoint.io/524d5701cca13cd35077").json().get("books")
+    return render_template("books.html", books=books)
+
+
+@app.route("/books/<int:book_id>")
+def book(book_id):
+    books = requests.get("https://api.npoint.io/524d5701cca13cd35077").json().get("books")
+    book = books[book_id]
+    return render_template("book.html", book=book)
 
 
 @app.route("/lists")

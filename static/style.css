@@ -263,8 +263,14 @@ ul {
     opacity: 1;
 }
 
+.book-finish-date {
+    color: #42ac72;
+    margin: 5px 0;
+}
 
-
+.book-name {
+    margin: 20px 0 5px 0;
+}
 
 
 

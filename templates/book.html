@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}1984 | George Orwell{% endblock %}
+
+{% block body %}
+<main>
+    <div class="container">
+        <nav class="navbar">
+            <a href="/" class="nav-link">
+                <span class="animate_letters">[ky.org]</span>
+            </a>
+            <a href="{{ url_for('cv') }}" class="nav-link">
+                <span class="animate_letters">[cv]</span>
+            </a>
+            <a href="{{ url_for('books') }}" class="nav-link">
+                <span class="animate_letters">[books]</span>
+            </a>
+            <a href="{{ url_for('posts') }}" class="nav-link">
+                <span class="animate_letters">[posts]</span>
+            </a>
+            <a href="{{ url_for('lists') }}" class="nav-link">
+                <span class="animate_letters">[lists]</span>
+            </a>
+        </nav>
+        <br>
+        <br>
+        <img src="{{ url_for('static', filename='images/'+book['image']) }}" alt="{{ book['name'] }}" class="book-image">
+        <h3 class="book-name">{{ book["name"] }} <span class="book-author">by {{ book["author"] }}</span></h3>
+        <h4 class="book-finish-date">Finished on: <em>{{ book["finished"] }}</em></h4>
+        <!-- <div class="reflection">
+            <h2 class="reflection-title">Reflection</h2>
+            <p class="reflection-text">
+                {{ book["reflection"] }} 
+            </p>
+        </div> -->
+    </div>
+</main>
+{% endblock %}
